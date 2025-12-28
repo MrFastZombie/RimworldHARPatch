@@ -14,6 +14,8 @@ As it stands currently, shaders are cached once and never again until the game i
 
 I can't recommend relying on this unless you understand what it is doing and what problem it solves.
 
+Also, if you have a light modlist then this patch will probably provide very little improvement.
+
 ## Does it work?
 
 ### Anecdotal remarks
