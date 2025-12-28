@@ -45,3 +45,5 @@ FPS averaged 40 while zoomed out.
 ### Conclusion
 
 The patch appears to improve performance with a huge modlist such as mine. The call time improved by 20x.  Do note that actual gameplay FPS may be higher, as I've noted running the profiler may reduce framerate as well. After running with the patch, I've also noticed less stuttering. I'd say that this patch has been successful in fixing this performance concern with my modlist.
+
+Note: Later I'd like to try another test with cache values being flushed if older than some amount of ticks.
