@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
     <ModName>HAR CheckShaderMask Patch</ModName>
-    <EnableDesc>Enable/Disable the mod by skipping the code in the Harmony patches. (Note: This does not fully disable the Harmony patches, disable the mod to do that.)</EnableDesc>
+    <EnableDesc>Enable/Disable the mod by skipping the code in the Harmony patches. Restart is NOT required. (Note: This does not fully disable the Harmony patches, disable the mod to do that.)</EnableDesc>
     <Enabled>Enabled</Enabled>
     <Label>Tick Lifetime (60 Ticks = 1 Second)</Label>
-    <SubLabel>The number of ticks before a shader is removed from the cache.</SubLabel>
+    <SubLabel>The number of ticks before a shader is removed from the cache. Restart is NOT required!</SubLabel>
 </LanguageData>
