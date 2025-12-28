@@ -36,12 +36,22 @@ namespace HARCheckMaskShaderPatch
     public static class CheckMaskShader_Patch
     {
         private static Dictionary<string, Shader> shaderCache = new Dictionary<string, Shader>();
-        private static Dictionary<string, int> shaderCount = new Dictionary<string, int>();
+        private static Dictionary<string, int> shaderTick = new Dictionary<string, int>();
 
         public static bool Prefix(ref Shader __result, ref string texPath, ref Shader shader, ref bool pathCheckOverride)
         {
+            int tick = GenTicks.TicksGame;
             if(shaderCache.ContainsKey(texPath))
             {
+                if(shaderTick.ContainsKey(texPath))
+                {
+                    if(tick - shaderTick[texPath] >= 60)
+                    {
+                        shaderTick.Remove(texPath);
+                        shaderCache.Remove(texPath);
+                        return true;
+                    }
+                }
                 __result = shaderCache[texPath];
                 return false;
             }
@@ -51,23 +61,10 @@ namespace HARCheckMaskShaderPatch
 
         static void Postfix(ref Shader __result, ref string texPath)
         {
-            if(shaderCount.ContainsKey(texPath) && shaderCount[texPath] < 3)
+            if(shaderCache.ContainsKey(texPath) == false)
             {
-                shaderCount[texPath]++;
-            } else
-            {
-                if(shaderCount.ContainsKey(texPath) == false)
-                {
-                    shaderCount.Add(texPath, 1);
-                }
-            }
-
-            if(shaderCount[texPath] >= 3)
-            {
-                if(shaderCache.ContainsKey(texPath) == false)
-                {
                     shaderCache.Add(texPath, __result);
-                }
+                    shaderTick.Add(texPath, GenTicks.TicksGame);
             }
         }
     }

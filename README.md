@@ -42,8 +42,21 @@ FPS averaged 40 while zoomed out.
 
 ![Test results showing 40us per call avg](./test2.png)
 
+### Test 3: Patch with 30 tick (0.5s) cache entry lifetime, 3 baseliners and 5 HAR pawns, Whole map in view. 1 minute of data collection
+
+40ish fps, mostly stable 60 TPS.
+
+![Test results showing 97us per call avg](./test3.png)
+
+These results are technically worse than Test 2, but the performance is still acceptable.
+
+### Test 4: Patch with 60 tick (1s) cache entry lifetime, 3 baseliners and 5 HAR pawns, Whole map in view. 1 minute of data collection
+
+FPS was around 50 but that may be an outlier due to a more mountaineous map. TPS stuck around 60.
+![Test results showing 51us per call avg](./test4.png)
+
 ### Conclusion
 
-The patch appears to improve performance with a huge modlist such as mine. The call time improved by 20x.  Do note that actual gameplay FPS may be higher, as I've noted running the profiler may reduce framerate as well. After running with the patch, I've also noticed less stuttering. I'd say that this patch has been successful in fixing this performance concern with my modlist.
+The patch appears to improve performance with a huge modlist such as mine. The call time improved by 20x. Do note that actual gameplay FPS may be higher, as I've noted running the profiler may reduce framerate as well. After running with the patch, I've also noticed less stuttering. I'd say that this patch has been successful in fixing this performance concern with my modlist.
 
-Note: Later I'd like to try another test with cache values being flushed if older than some amount of ticks.
+Removing cache entries older than 60 ticks provides a similar boost to keeping a permament cache, but allows the shaders to update if they need to be dynamic.

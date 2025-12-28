@@ -3,22 +3,33 @@
 	<packageId>MrFastZombie.HARpatch</packageId>
 	<name>HAR CheeckMaskShader Patch</name>
 	<author>MrFastZombie</author>
+	<url>https://github.com/MrFastZombie/RimworldHARPatch</url>
 	<supportedVersions>
 		<li>1.6</li>
 	</supportedVersions>
 
 	<modDependencies>
-		<!-- <li>
+		<li>
 			<packageId>brrainz.harmony</packageId>
 			<displayName>Harmony</displayName>
 			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
 			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
-		</li> -->
+		</li>
+		<li>
+			<packageId>erdelf.humanoidalienraces</packageId>
+			<displayName>Humanoid Alien Races</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/839005762</steamWorkshopUrl>
+			<downloadUrl>https://github.com/erdelf/AlienRaces/releases/latest</downloadUrl>
+		</li>
 	</modDependencies>
+
+	<loadAfter>
+  		<li>erdelf.HumanoidAlienRaces</li>
+	</loadAfter>
 
 	<incompatibleWith>
 		<!-- <li>username.modname</li> -->
 	</incompatibleWith>
 
-	<description>Template</description>
+	<description>Patches CheckMaskShader() in HAR with a cache to speed up calls.</description>
 </ModMetaData>
