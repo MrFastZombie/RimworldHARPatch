@@ -53,6 +53,14 @@ Prior to running this patch, my game would drop tons of frames when zoomed out d
 
 With the patch, zooming out can still reduce the frame rate but to a lesser degree.
 
+### A note on FPS/TPS
+
+I've included FPS and TPS counts, but with limited testing there could be outliers.
+
+Also, this data was collected with Performance Analyzer, which reduces the FPS while it is running. So my FPS during gameplay is actually much better.
+
+The main value to keep an eye on is the "Av per call" to show improvement.
+
 ### Test 1: No patch, 3 baseliners and 5 HAR pawns, Whole map in view. 1 minute of data collection
 
 TPS was around 40, with many fluctuations.
