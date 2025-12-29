@@ -69,6 +69,8 @@ FPS was 20-35.
 
 ![Test results showing 830us per call avg](./test1.png)
 
+This sets our baseline of 830us per function call.
+
 ### Test 2: Patch without tick based renewal, 3 baseliners and 5 HAR pawns, Whole map in view. 1 minute of data collection
 
 TPS stayed around 60.
@@ -77,11 +79,15 @@ FPS averaged 40 while zoomed out.
 
 ![Test results showing 40us per call avg](./test2.png)
 
+**Result:** Reduced to 40us per call.
+
 ### Test 3: Patch with 30 tick (0.5s) cache entry lifetime, 3 baseliners and 5 HAR pawns, Whole map in view. 1 minute of data collection
 
 40ish fps, mostly stable 60 TPS.
 
 ![Test results showing 97us per call avg](./test3.png)
+
+**Result:** Reduced to 97us per call.
 
 These results are technically worse than Test 2, but the performance is still acceptable.
 
@@ -89,6 +95,8 @@ These results are technically worse than Test 2, but the performance is still ac
 
 FPS was around 50 but that may be an outlier due to a more mountaineous map. TPS stuck around 60.
 ![Test results showing 51us per call avg](./test4.png)
+
+**Result:** Reduced to 51us per call.
 
 ### Conclusion
 
