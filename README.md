@@ -16,6 +16,33 @@ I can't recommend relying on this unless you understand what it is doing and wha
 
 Also, if you have a light modlist then this patch will probably provide very little improvement.
 
+## Installation
+
+### Manual
+
+Clone this repository into the `Mods` folder in your Rimworld install directory.
+
+(Or you can click the green `Code` button above and press `Download Zip` and extract the zip to the folder instead.)
+
+Default folder locations (Info taken from <https://rimworldwiki.com/wiki/Modding_Tutorials/Mod_Folder_Structure>):
+
+1. Windows: `C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods`
+2. Mac: `~/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Mods`
+3. Linux (Steam): `~/.steam/steam/steamapps/common/RimWorld/Mods`
+4. Linux (GOG): `/home/<user>/GOG/Games/RimWorld/game/Mods/`
+
+Note that these locations may be different depending on whether you used a Steam library on another drive, used GOG or changed the GOG install directory.
+
+### Rimsort (Recommended!)
+
+In Rimsort's top bar, select `Download -> Add Git Mod` and put the URL of this repository in the text prompt that comes up.
+
+Once it downloads, press `Refresh` near the bottom to make the mod show in the left pane and drag it to the right pane.
+
+You can update the mod by right clicking it and selected `Miscellaneous options -> Update mod with git`.
+
+You may get a warning that this mod lacks a publish field ID. If this happens, select the mod and press add to ignore list.
+
 ## Does it work?
 
 ### Anecdotal remarks
