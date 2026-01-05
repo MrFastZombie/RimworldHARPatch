@@ -2,6 +2,9 @@
 
 This is an experimental patch for [Humanoid Alien Races](https://github.com/erdelf/AlienRaces) for Rimworld 1.6 that caches the results of CheckMaskShader() to speed up its calls.
 
+**NOTE:** I have recently released a more generalized patch which may provide a substatial performance boost for large mod lists, you can find it at <https://github.com/MrFastZombie/RimworldContentFinderOptimizer>.
+This mod may not be necessary with it, though they can both work together.
+
 ## Why?
 
 In my modlist (now 1000 mods with this one), there was an issue of HAR calling HeadGraphicForPrefix() many times per second, and each call goes through all of my 58,000 texture files as far as I can tell. Most of the time was spent on the CheckMaskShader() method within it, and caching the results for that method was simple.
